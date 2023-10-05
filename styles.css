@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffcc00; /* Amarillo */
+    color: #003366; /* Azul oscuro */
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.departamentos {
+    display: block;
+    align-items: center;
+}
+
+.departamentos select {
+    padding: 8px;    
+    border-radius: 3px;
+    background-color: #fff; /* Fondo blanco */
+    color: #003366; /* Texto azul oscuro */
+    cursor: pointer;
+}
+
+.telefono img {
+    max-width: 40px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366; /* Azul oscuro */
+    font-weight: bold;
+    position: relative;
+}
+
+.icon-container {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto */
+}
+
+.icon-container img {
+    max-width: 20px;
+    height: auto;
+}
+
+/* Estilo para el carrito */
+nav a.carrito {
+    background-color: #003366; /* Color azul oscuro */
+    padding: 5px; /* Ajusta el espacio interno según tu preferencia */
+    border-radius: 5px; /* Añade esquinas redondeadas si lo deseas */
+}
+
+nav a:after {
+    content: attr(data-text);
+    display: block;
+    font-size: 12px;
+    color: #555; /* Color de texto gris */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-right: flex;
+}
+
+.search button {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #003366; /* Azul oscuro */
+    color: #fff; /* Blanco */
+    cursor: pointer;
+}
+.barra-blanca {
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px 20px; /* Ajusta el espaciado según tu preferencia */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; /* Borde inferior de 1 píxel de color gris claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra con desplazamiento 0, 2 píxeles de desenfoque y opacidad 0.1 */
+  }
+  
+  .secciones-izquierda,
+  .secciones-derecha {
+    display: flex;
+  }
+  
+  .secciones-izquierda span,
+  .secciones-derecha span {
+    margin-right: 20px; /* Ajusta el espaciado entre las secciones según tu preferencia */
+  }
+  
+  /* Estilo para las secciones */
+  span {
+    color: #003366; /* Texto azul oscuro */
+    cursor: pointer;
+  }
+  /* Estilos para los contenedores centrales */
+.contenedores-centrales {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel img {
+    width: 100%;
+    height: auto;
+}
+
+.navegacion {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.punto.activo {
+    background-color: #333;
+}
+
+.imagenes-columna {
+    width: 30%; /* Ajusta el ancho según sea necesario */
+}
+
+.imagenes-columna img {
+    width: 65%;
+    margin-bottom: 10px; /* Espaciado entre las imágenes */
+}
+
+  

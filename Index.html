@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick-theme.css" />
+
+    <title>Mi Tienda</title>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./images/Logo Coppel3-01.png" alt="Logo de Mi Tienda">
+        </div>
+
+
+
+        <!-- Buscador -->
+        <div class="search">
+            <!-- Departamentos -->
+            <div class="departamentos">
+                <select id="departamento">
+                    <option value="Todo el sitio">Todo el sitio</option>
+                    <option value="Hogar y muebles">Hogar y muebles</option>
+                    <option value="Línea Blanca">Línea Blanca</option>
+                    <option value="Cocina y Electrodomésticos">Cocina y Electrodomésticos</option>
+                    <option value="Celulares">Celulares</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Consolas y videojuegos">Consolas y videojuegos</option>
+                    <option value="Zapatos">Zapatos</option>
+                    <option value="Niños y adolescentes">Niños y adolescentes</option>
+                    <option value="Hombres">Hombres</option>
+                    <option value="Mujeres">Mujeres</option>
+                    <option value="Maletas, Bolsas y Mochilas">Maletas, Bolsas y Mochilas</option>
+                    <option value="Relojes Lentes y Joyería">Relojes Lentes y Joyería</option>
+                    <option value="Belleza y Cuidado Personal">Belleza y Cuidado Personal</option>
+                    <option value="Motos y Movilidad">Motos y Movilidad</option>
+                    <option value="Automotriz y Refacciones">Automotriz y Refacciones</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Juguetes">Juguetes</option>
+                    <option value="Mascotas">Mascotas</option>
+                    <option value="Ferretería y Mejoras del Hogar">Ferretería y Mejoras del Hogar</option>
+                    <option value="Instrumentos Musicales">Instrumentos Musicales</option>
+                    <option value="Libros, Revistas y Cómics">Libros, Revistas y Cómics</option>
+                    <option value="Salud y Bienestar">Salud y Bienestar</option>
+                </select>
+            </div>
+            <input type="text" placeholder="Busca tus productos">
+            <button type="submit">
+                <img src="./images/lupa-de-busqueda.png" alt="Ícono de búsqueda">
+            </button>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <div class="icon-container telefono">
+                        <img src="images/llamada-telefonica.png" alt="Ícono de llamada telefónica">
+                    </div>
+                    <a href="#" data-text="998 896 1589">Compra ahora</a>
+                </li>
+                <li>
+                    <div class="icon-container">
+                        <img src="images/marcador.png" alt="Ícono de marcador">
+                    </div>
+                    <a href="#" data-text="ciudad de compra">Elige tu</a>
+                </li>
+                <li>
+                    <a href="#" class="carrito">
+                        <img src="images/carrito-de-compras.png" alt="Carrito de compras">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra blanca -->
+    <div class="barra-blanca">
+        <div class="secciones-izquierda">
+            <span>Departamentos</span>
+            <span>Ofertas</span>
+            <span>Exclusivos en línea</span>
+            <span>Servicios</span>
+        </div>
+        <div class="secciones-derecha">
+            <span>Ubica tu tienda</span>
+            <span>Sigue tus pedidos</span>
+            <span>Ayuda</span>
+        </div>
+    </div>
+    <div class="contenedores-centrales">
+        <!-- Carrusel -->
+        <div class="carrusel-container">
+            <div class="container">
+                <div class="carrusel">
+                    <div class="slide"><img src="./images/img1.png" alt="Imagen 1"></div>
+                    <div class="slide"><img src="./images/img2.png" alt="Imagen 2"></div>
+                    <div class="slide"><img src="./images/img3.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="./images/img4.png" alt="Imagen 4"></div>
+                    <div class="slide"><img src="./images/img5.png" alt="Imagen 5"></div>
+                    <div class="slide"><img src="./images/img6.png" alt="Imagen 6"></div>
+                    <div class="slide"><img src="./images/img1.png" alt="Imagen 1"></div>
+                    <div class="slide"><img src="./images/img2.png" alt="Imagen 2"></div>
+                </div>
+            </div>
+            <div class="navegacion">
+                <div class="punto" onclick="cambiarSlide(0)"></div>
+                <div class="punto" onclick="cambiarSlide(1)"></div>
+                <div class="punto" onclick="cambiarSlide(2)"></div>
+                <div class="punto" onclick="cambiarSlide(3)"></div>
+                <div class="punto" onclick="cambiarSlide(4)"></div>
+                <div class="punto" onclick="cambiarSlide(5)"></div>
+            </div>
+        </div>
+
+        <!-- Imágenes en forma de columna -->
+        <div class="imagenes-columna">
+            <img src="./images/D1.png" alt="Imagen 1">
+            <img src="./images/D2.png" alt="Imagen 2">
+        </div>
+        
+    </div>
+    <script>
+        const carrusel = document.querySelector('.carrusel');
+        const puntos = document.querySelectorAll('.punto');
+        let contador = 0;
+
+        function deslizar() {
+            const anchoSlide = document.querySelector('.slide').clientWidth;
+
+            if (contador === -1) {
+                contador = puntos.length - 1;
+            } else if (contador === puntos.length) {
+                contador = 0;
+            }
+
+            carrusel.style.transition = 'transform 0.5s ease-in-out';
+            carrusel.style.transform = `translateX(${-contador * anchoSlide}px)`;
+
+            // Actualizar los puntos de navegación
+            puntos.forEach((punto, index) => {
+                punto.classList.remove('activo');
+                if (index === contador) {
+                    punto.classList.add('activo');
+                }
+            });
+        }
+
+        function cambiarSlide(index) {
+            contador = index;
+            deslizar();
+        }
+
+        function autoplay() {
+            setInterval(() => {
+                contador++;
+                deslizar();
+            }, 2000); // Cambia la imagen cada 2 segundos
+        }
+
+        autoplay();
+    </script>
+
+</body>
+</html>
