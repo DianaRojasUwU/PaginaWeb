@@ -179,5 +179,85 @@ nav a:after {
     width: 65%;
     margin-bottom: 10px; /* Espaciado entre las imágenes */
 }
+.centrado {
+    text-align: center;
+}
 
-  
+/* Estilos para las cards */
+.departamentos-cards {
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Leve sombreado */
+    border: 2px solid #ccc; /* Contorno gris */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición al pasar el mouse */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+}
+
+.departamento-texto {
+    color: black;
+    font-weight: bold;
+}
+
+.descuento-texto {
+    color: red;
+    text-decoration: underline;
+    opacity: 0.7;
+}
+.tarjeta-azul {
+    color: #fff; /* Texto blanco */
+    background-color: #006cba; /* Azul */
+    border: 2px solid #2980b9; /* Contorno azul más oscuro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Leve sombreado */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición al pasar el mouse */
+}
+
+.tarjeta-azul:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+.centrada {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Estilos para el nuevo contenedor centrado */
+.nuevo-contenedor {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nuevo-contenedor img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para las columnas derechas */
+.nuevo-contenedor .columna-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre las imágenes */
+}
+
