@@ -260,4 +260,62 @@ nav a:after {
     flex-direction: column;
     gap: 10px; /* Espaciado entre las imágenes */
 }
+footer {
+    background-color: #080630; /* Color de fondo oscuro */
+    color: #ffffff; /* Texto en color blanco */
+    padding: 20px 0; /* Espaciado interior en la parte superior e inferior */
+
+    /* Estilos flex para alinear verticalmente las secciones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para las secciones de Compra Segura y Descarga de App en la misma línea */
+.footer-section {
+    margin: 20px 0; /* Espaciado entre secciones */
+    display: flex; /* Establece un diseño flex para los elementos internos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior verticalmente */
+}
+
+.centered-section {
+    text-align: center; /* Alineación de texto centrada */
+    margin: 0 10px; /* Espaciado horizontal entre las secciones */
+}
+
+.centered-section p {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espaciado inferior entre el título y las imágenes */
+}
+
+.centered-section img {
+    width: 50px; /* Ancho de las imágenes de logotipos */
+    margin: 5px; /* Espaciado entre las imágenes */
+}
+
+/* Estilos para las secciones de texto alineado a la izquierda */
+.left-aligned-section {
+    margin-right: 70px; /* Espaciado entre las secciones */
+    flex: 1; /* Permite que las secciones ocupen el mismo espacio horizontal */
+}
+
+.left-aligned-section p {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espaciado inferior entre el título y la lista */
+}
+
+.left-aligned-section ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el relleno de la lista */
+}
+
+.left-aligned-section ul li {
+    margin-bottom: 5px; /* Espaciado entre los elementos de la lista */
+}
+/* Estilos adicionales para las imágenes grandes */
+.large-icon {
+    width: 200px; /* Aumenta el ancho de las imágenes de Google Play y App Store */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+    margin: 5px; /* Espaciado entre las imágenes */
+}
 
